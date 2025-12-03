@@ -146,7 +146,10 @@ export class Header extends LitElement {
     }
 
     handleGuideMe() {
-        // Placeholder for Guide me functionality
+        this.dispatchEvent(new CustomEvent('guide-me', {
+            bubbles: true,
+            composed: true
+        }));
         console.log('Guide me clicked');
     }
 
