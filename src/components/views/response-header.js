@@ -50,6 +50,7 @@ export class ResponseHeader extends LitElement {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             cursor: pointer;
             transition: background 0.2s ease;
+            -webkit-app-region: no-drag;
         }
 
         button:hover {

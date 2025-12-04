@@ -37,6 +37,7 @@ export class PromptInputBox extends LitElement {
             border-radius: 12px;
             padding: 0 20px;
             transition: border-color 0.2s ease;
+            -webkit-app-region: no-drag;
         }
 
         .input-wrapper:focus-within {
@@ -73,6 +74,7 @@ export class PromptInputBox extends LitElement {
             cursor: pointer;
             transition: all 0.2s ease;
             white-space: nowrap;
+            -webkit-app-region: no-drag;
         }
 
         .submit-button:hover {
@@ -97,6 +99,7 @@ export class PromptInputBox extends LitElement {
 
     connectedCallback() {
         super.connectedCallback();
+        console.log('PromptInputBox connected and visible');
         // Focus input after component renders
         setTimeout(() => this.focusInput(), 100);
     }

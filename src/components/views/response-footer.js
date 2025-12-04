@@ -35,6 +35,7 @@ export class ResponseFooter extends LitElement {
             cursor: pointer;
             transition: all 0.2s ease;
             white-space: nowrap;
+            -webkit-app-region: no-drag;
         }
 
         .next-step-button:hover {
@@ -55,6 +56,7 @@ export class ResponseFooter extends LitElement {
             border-radius: 8px;
             padding: 0 12px;
             transition: border-color 0.2s ease;
+            -webkit-app-region: no-drag;
         }
 
         .input-container:focus-within {
@@ -90,6 +92,7 @@ export class ResponseFooter extends LitElement {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             cursor: pointer;
             transition: all 0.2s ease;
+            -webkit-app-region: no-drag;
         }
 
         .ask-button:hover {

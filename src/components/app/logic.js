@@ -1,7 +1,7 @@
 import { html, css, LitElement } from "../../assets/lit-core.min.js";
 import "./header.js";
-import "./response.js";
 import "../views/promptInputBox.js";
+import "../views/promptResponseBox.js";
 
 export class Logic extends LitElement {
     static properties = {
@@ -34,12 +34,12 @@ export class Logic extends LitElement {
             z-index: 200;
         }
 
-        app-response,
+        prompt-response-box,
         prompt-input-box {
             display: block;
         }
 
-        app-response[hidden],
+        prompt-response-box[hidden],
         prompt-input-box[hidden] {
             display: none;
         }
@@ -54,6 +54,8 @@ export class Logic extends LitElement {
 
     connectedCallback() {
         super.connectedCallback();
+        console.log('Logic component connected');
+        console.log('Adding event listeners for:', 'response-closed', 'guide-me', 'prompt-submitted');
         this.addEventListener('response-closed', this.handleResponseClosed);
         this.addEventListener('guide-me', this.handleGuideMeClicked);
         this.addEventListener('prompt-submitted', this.handlePromptSubmitted);
@@ -87,7 +89,10 @@ export class Logic extends LitElement {
         return html`
             <div class="logic-container">
                 <prompt-input-box ?hidden="${!this.showPromptInput}"></prompt-input-box>
-                <app-response ?hidden="${!this.showResponse}"></app-response>
+                <prompt-response-box 
+                    ?hidden="${!this.showResponse}"
+                    .taskTitle="${this.currentPrompt}"
+                ></prompt-response-box>
                 
                 <div class="header-wrapper">
                     <app-header></app-header>
