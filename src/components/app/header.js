@@ -203,4 +203,4 @@ export class Header extends LitElement {
     }
 }
 
-customElements.define('header', Header);
+customElements.define('app-header', Header);

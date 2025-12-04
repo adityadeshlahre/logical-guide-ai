@@ -18,5 +18,4 @@ single electron app with gemini sdk which can transcribe the image and send it g
         - if user has done the last thing correctly or not
             - if not then if current screen matches with last screen then do not call gemini api { different node for this }
             - if yes then again take screen shot and proccess it and return response for next step
-[loop] : "until goal reached"
-
+5. [loop] : "until goal reached" { initial prompt -> step 2 }

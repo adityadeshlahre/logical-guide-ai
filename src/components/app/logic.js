@@ -34,12 +34,12 @@ export class Logic extends LitElement {
             z-index: 200;
         }
 
-        response,
+        app-response,
         prompt-input-box {
             display: block;
         }
 
-        response[hidden],
+        app-response[hidden],
         prompt-input-box[hidden] {
             display: none;
         }
@@ -87,14 +87,14 @@ export class Logic extends LitElement {
         return html`
             <div class="logic-container">
                 <prompt-input-box ?hidden="${!this.showPromptInput}"></prompt-input-box>
-                <response ?hidden="${!this.showResponse}"></response>
+                <app-response ?hidden="${!this.showResponse}"></app-response>
                 
                 <div class="header-wrapper">
-                    <header></header>
+                    <app-header></app-header>
                 </div>
             </div>
         `;
     }
 }
 
-customElements.define('logic', Logic);
+customElements.define('app-logic', Logic);

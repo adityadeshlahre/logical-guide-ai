@@ -113,4 +113,4 @@ export class Response extends LitElement {
     }
 }
 
-customElements.define('response', Response);
+customElements.define('app-response', Response);

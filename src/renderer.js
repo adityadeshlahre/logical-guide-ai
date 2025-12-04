@@ -29,6 +29,6 @@
 import './components/app/logic.js';
 
 console.log(
-  '👋 This message is being logged by "renderer.js", included via webpack',
+    '👋 This message is being logged by "renderer.js", loaded as ES6 module',
 );
 

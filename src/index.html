@@ -9,6 +9,7 @@
     :root {
       --background-transparent: transparent;
       --text-color: #e5e5e7;
+      -webkit-app-region: drag;
     }
 
     html,
@@ -30,7 +31,7 @@
       box-sizing: border-box;
     }
 
-    logic {
+    app-logic {
       display: block;
       width: 100%;
       height: 100%;
@@ -41,7 +42,8 @@
 <body>
   <script src="assets/marked.umd.js"></script>
   <script src="assets/highlight.min.js"></script>
-  <logic></logic>
+  <script type="module" src="renderer.js"></script>
+  <app-logic></app-logic>
 </body>
 
 </html>
