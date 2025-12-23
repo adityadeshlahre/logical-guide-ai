@@ -1,3 +1,7 @@
+## App Demo Image
+
+<img width="801" height="512" alt="image" src="https://github.com/user-attachments/assets/30b530ea-643d-41f1-a30e-5be316e4138d" />
+
 ## Approch 1
 
 for backend with external api or agent bundlled within the a single pyhton binary file exported into extraResouce in electron app!
